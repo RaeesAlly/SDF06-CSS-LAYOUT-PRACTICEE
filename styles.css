@@ -1,0 +1,91 @@
+.profile-stats {
+    flex-grow: 1; /* Takes up remaining space */
+    text-align: center;
+}
+
+.profile-stats ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Evenly distributes list items */
+    padding: 0;
+    margin: 0;
+}
+
+.profile-stats li {
+    display: inline-block; /* Align list items horizontally */
+}
+
+.profile-bio {
+    margin-top: 10px; /* Add space between stats and bio */
+}
+
+main {
+    margin-top: 200px; /* Adjusted margin for better spacing */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%; /* Adjusted height for consistency */
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+
+.gallery-item-likes,
+.gallery-item-comments {
+    color: #fff;
+    display: block;
+    margin: 4px 0;
+}
+
+.fa-heart,
+.fa-comment {
+    margin-right: 4px;
+}
+
+.loader {
+    margin-top: 20px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    display: block; 
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
